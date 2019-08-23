@@ -1,2 +1,2 @@
 # wicli
-CLI tool for quick wikipedia searches
+This tool was made in order to look up short precise definitions for whatever you need.

@@ -28,6 +28,10 @@ for i in range(0, len(search_query)):
 json_p = json.loads(ur.urlopen("https://en.wikipedia.org/w/api.php?action=opensearch&redirects=resolve&format=json&search=" + query).read())
 link_dict = {}
 
+if isinstance(json_p, dict):
+    print("Please enter a term to search for.")
+    exit(1)
+
 if len(json_p[1]) != 0:
     if "may refer to:" in json_p[2][0]:
         json_p[1].pop(0)
